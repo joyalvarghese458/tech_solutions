@@ -8,11 +8,13 @@ import Footer from './Components/Footer'
 import Portfolio from './Pages/PortFolio'
 import Careers from './Pages/Careers'
 import Contact from './Pages/Contact'
+import SmokeCursor from './Components/SmokeCursor'
 
 function App() {
 
   return (
     <Router>
+      <SmokeCursor />
       <CommonNav />
       <Routes>
         <Route path='/' element={<Home />} />
