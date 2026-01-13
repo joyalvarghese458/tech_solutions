@@ -1,0 +1,554 @@
+/* Footer.css */
+
+/* Footer Base Styles */
+.footer {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e0e0e0;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(0, 136, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Main Footer */
+.footer-main {
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer Logo */
+.footer-logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #00d4ff, #0088ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-description {
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Trust Badges */
+.trust-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    border-left: 3px solid #00d4ff;
+    transition: all 0.3s ease;
+}
+
+.trust-badge:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.trust-badge svg {
+    color: #00d4ff;
+}
+
+.trust-badge span {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Footer Headings */
+.footer-heading {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #00d4ff, #0088ff);
+    border-radius: 2px;
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-link {
+    color: #b0b0b0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-link:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.footer-link svg {
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.footer-link:hover svg {
+    opacity: 1;
+    color: #00d4ff;
+}
+
+/* Newsletter Section */
+.footer-newsletter {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.newsletter-text {
+    color: #b0b0b0;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.newsletter-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.newsletter-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #00d4ff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 212, 255, 0.25);
+    color: white;
+}
+
+.newsletter-input::placeholder {
+    color: #888;
+}
+
+.btn-newsletter {
+    background: linear-gradient(135deg, #00d4ff, #0088ff);
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-newsletter:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+}
+
+/* Contact Information */
+.contact-info {
+    margin-top: 1rem;
+}
+
+.contact-heading {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.contact-icon {
+    color: #00d4ff;
+    flex-shrink: 0;
+}
+
+.contact-link,
+.contact-text {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #00d4ff;
+}
+
+/* Social Media */
+.social-section {
+    margin-top: 1rem;
+}
+
+.social-heading {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+    background: linear-gradient(135deg, #00d4ff, #0088ff);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+    border-color: transparent;
+}
+
+/* Security Badges */
+.security-badges {
+    margin-top: 1rem;
+}
+
+.security-heading {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.security-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.security-badge:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.badge-icon {
+    font-size: 1.2rem;
+}
+
+.security-badge span {
+    color: #b0b0b0;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.copyright p {
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+}
+
+.copyright svg {
+    vertical-align: middle;
+}
+
+.footer-legal {
+    text-align: right;
+}
+
+.legal-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.legal-link {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.legal-link:hover {
+    color: #00d4ff;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #00d4ff, #0088ff);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .footer-logo {
+        font-size: 1.8rem;
+    }
+
+    .footer-heading {
+        font-size: 1.1rem;
+    }
+
+    .legal-links {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .footer-legal {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-main {
+        padding: 3rem 0;
+    }
+
+    .footer-bottom {
+        padding: 2rem 0;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    .legal-links {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .footer-newsletter {
+        padding: 1.2rem;
+    }
+
+    .trust-badges {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .trust-badge {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .badges-container {
+        justify-content: center;
+    }
+
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-logo {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .footer-description {
+        text-align: center;
+    }
+
+    .footer-heading {
+        text-align: center;
+    }
+
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer-link {
+        justify-content: center;
+    }
+
+    .contact-details {
+        align-items: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .trust-badge {
+        min-width: 100%;
+    }
+
+    .back-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Animation for footer elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer>div {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Quote Modal Styles */
+.quote-modal .modal-header {
+    background: linear-gradient(135deg, #00d4ff, #0088ff);
+    color: white;
+}
+
+.quote-modal .modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+.quote-modal .form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.quote-modal .form-control,
+.quote-modal .form-select {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.quote-modal .form-control:focus,
+.quote-modal .form-select:focus {
+    border-color: #00d4ff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 212, 255, 0.25);
+}
