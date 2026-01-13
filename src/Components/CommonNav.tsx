@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Navbar,
   Nav,
@@ -13,6 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Style/Navbar.css';
 
 function CompanyNavbar() {
+  const navigate = useNavigate(); // Add this hook
   const [expanded, setExpanded] = useState(false);
   const [showQuoteModal, setShowQuoteModal] = useState(false);
   const [quoteForm, setQuoteForm] = useState({
@@ -29,6 +31,29 @@ function CompanyNavbar() {
   const handleNavSelect = (selectedKey: any) => {
     console.log(`Selected: ${selectedKey}`);
     setExpanded(false);
+    // Navigate based on selected key
+    switch (selectedKey) {
+      case 'home':
+        navigate('/');
+        break;
+      case 'about':
+        navigate('/about');
+        break;
+      case 'services':
+        navigate('/services');
+        break;
+      case 'portfolio':
+        navigate('/portfolio');
+        break;
+      case 'careers':
+        navigate('/careers');
+        break;
+      case 'contact':
+        navigate('/contact');
+        break;
+      default:
+        navigate('/');
+    }
   };
 
   const handleQuoteInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -41,12 +66,9 @@ function CompanyNavbar() {
 
   const handleSubmitQuote = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle quote submission
     console.log('Quote request submitted:', quoteForm);
-    // You can add API call here
     alert('Thank you! We will contact you with a quote within 24 hours.');
     setShowQuoteModal(false);
-    // Reset form
     setQuoteForm({
       projectType: '',
       timeline: '',
@@ -70,8 +92,9 @@ function CompanyNavbar() {
       <Container fluid>
         {/* Company Name on the left */}
         <Navbar.Brand
-          href="/"
+          onClick={() => navigate('/')} // Change href to onClick
           className="company-name d-flex align-items-center"
+          style={{ cursor: 'pointer' }}
         >
           <div className="company-logo-placeholder">
             <span className="logo-text">TS</span>
@@ -95,7 +118,6 @@ function CompanyNavbar() {
           >
             <Nav.Item>
               <Nav.Link
-                href="/"
                 className="nav-link-custom"
                 eventKey="home"
               >
@@ -105,7 +127,6 @@ function CompanyNavbar() {
 
             <Nav.Item>
               <Nav.Link
-                href="/about"
                 className="nav-link-custom"
                 eventKey="about"
               >
@@ -115,7 +136,6 @@ function CompanyNavbar() {
 
             <Nav.Item>
               <Nav.Link
-                href="/services"
                 className="nav-link-custom"
                 eventKey="services"
               >
@@ -125,7 +145,6 @@ function CompanyNavbar() {
 
             <Nav.Item>
               <Nav.Link
-                href="/portfolio"
                 className="nav-link-custom"
                 eventKey="portfolio"
               >
@@ -135,7 +154,6 @@ function CompanyNavbar() {
 
             <Nav.Item>
               <Nav.Link
-                href="/careers"
                 className="nav-link-custom"
                 eventKey="careers"
               >
@@ -145,7 +163,6 @@ function CompanyNavbar() {
 
             <Nav.Item>
               <Nav.Link
-                href="/contact"
                 className="nav-link-custom"
                 eventKey="contact"
               >
