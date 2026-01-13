@@ -1,5 +1,4 @@
-
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css'
 import CommonNav from './Components/CommonNav'
 import Home from './Pages/Home'
@@ -13,7 +12,7 @@ import Contact from './Pages/Contact'
 function App() {
 
   return (
-    <BrowserRouter>
+    <Router>
       <CommonNav />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -22,9 +21,10 @@ function App() {
         <Route path='/portfolio' element={<Portfolio />} />
         <Route path='/careers' element={<Careers />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='*' element={<Home />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </Router>
   )
 }
 
